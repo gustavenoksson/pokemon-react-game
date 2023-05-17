@@ -21,14 +21,14 @@ const Pokemon = (props) => {
     const fetchData = () => { 
         let top = Math.ceil(Math.random() * 100);
 
-        while (top >= 55) {
+        while (top >= 45) {
             top = Math.ceil(Math.random() * 100);
         }
 
-        let left = Math.ceil(Math.random() * 85);
+        let left = Math.ceil(Math.random() * 75);
 
-        while (left <= 15) {
-            left = Math.ceil(Math.random() * 85);
+        while (left <= 25) {
+            left = Math.ceil(Math.random() * 75);
         }
 
         const level = Math.ceil(Math.random() * 100);

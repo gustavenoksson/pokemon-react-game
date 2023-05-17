@@ -47,24 +47,6 @@
     scale: 1.05;
 }
 
-.screen {
-    position: fixed;
-    display: flex;
-    justify-content: space-evenly;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 0px;
-    height: 0px;
-    background-color: white;
-    animation: enlarge 1s ease 0.5s forwards;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
 .screen::-webkit-scrollbar {
     display: none;
 }
@@ -96,8 +78,6 @@
 .singlePokemonContainer::-webkit-scrollbar {
     display: none;
 }
-
-
 
 .backButton {
     position: absolute;
@@ -138,6 +118,26 @@
         border-top: 100px solid lightgray;
         outline: solid 20px rgb(211, 41, 41);
         outline-offset: -20px;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes enlarge-mobile {
+    from {
+        background-color: black;
+    }
+    to {
+        background-color: rgb(183, 183, 183);
+        border: 30px solid lightgray;
+        border-top: 30px solid lightgray;
+        outline: solid 10px rgb(211, 41, 41);
+        outline-offset: -10px;
         box-sizing: border-box;
         height: 100%;
         width: 100%;
@@ -241,3 +241,85 @@
     position: relative;
 }
 
+@media screen and (min-width: 501px) {
+    .screen {
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 0px;
+        height: 0px;
+        background-color: white;
+        animation: enlarge 1s ease 0.5s forwards;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        right: 0.5rem;
+        bottom: 1rem;
+      }
+}
+
+@media screen and (max-width: 500px) {
+    .image {
+        width: 50px;
+    }
+
+    .screen {
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 0px;
+        height: 0px;
+        background-color: white;
+        animation: enlarge-mobile 1s ease 0.5s forwards;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .pokedexItem {
+        margin: 0.5rem 2rem;
+    }
+
+    .pokedexItem:first-child {
+        margin-top: 100px;
+    }
+
+    .closeButton {
+        margin-top: 3rem;
+    }
+
+    .singlePokemonContainer {
+        width: calc(100% - 60px);
+        margin: 30px auto 30px auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .singlePokemon {
+        width: calc(100% - 5rem);
+        margin-top: 6rem;
+    }
+
+    .singlePokemon p {
+        font-size: 0.5rem;
+    }
+
+    .backButton, .nextButton, .previousButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
+}

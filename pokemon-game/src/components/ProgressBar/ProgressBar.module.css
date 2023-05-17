@@ -53,3 +53,24 @@ progress[value]::-webkit-progress-value {
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 1000px) {
+    .xpBarContainer {
+        margin: 0 0 0.5rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    progress[value] {
+        width: 100px;
+        height: 10px;
+    }
+
+    .level, label {
+        font-size: 10px;
+    }
+
+    label {
+        bottom: 7px;
+    }
+}

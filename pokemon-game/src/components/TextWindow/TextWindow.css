@@ -21,4 +21,19 @@
 .text-window p {
     font-weight: bold;
     font-size: 1.5rem;
+    margin: 15rem;
 }
+
+@media screen and (max-width: 1050px) {
+    .text-window p {
+        margin: 0 8rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .text-window p {
+        margin: 0 4rem;
+    }
+}
+

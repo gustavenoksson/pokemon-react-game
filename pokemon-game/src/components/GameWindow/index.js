@@ -1,5 +1,5 @@
 import "./GameWindow.css";
-import backgroundImage from "../../assets/images/background-image.jpg";
+import backgroundImage from "../../assets/images/background-large.jpg";
 
 const GameWindow = () => {
     return (

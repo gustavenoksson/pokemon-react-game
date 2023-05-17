@@ -12,3 +12,14 @@
     border-top-right-radius: 100px;
 }
 
+@media screen and (max-width: 1000px) {
+    .MenuButton {
+        margin: 1.5rem 0.5rem 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .MenuButton {
+        padding: 0.5rem 1rem;
+    }
+}
